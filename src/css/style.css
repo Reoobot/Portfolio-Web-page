@@ -1,0 +1,407 @@
+*{
+    margin: 0px;
+    padding: 0;
+    box-sizing: border-box;
+    font-family:Arial, Helvetica, sans-serif ;
+    
+
+
+}
+
+/* ---------------BARRA DE NAVEGACION---------------------- */
+
+.navbar{
+   
+    height: 30px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+ 
+
+}
+.nav_logo{
+    font-weight: bold;
+    font-size: 20px;
+    margin: 15px;
+    color: white;
+    
+}
+.nav_items, a{
+    color: white;
+    text-decoration: none;
+    
+}
+
+a{
+    color: black;
+    margin: 1em ;
+    text-align: center;
+}
+
+.nav_toggle{
+    display: none;
+}
+
+
+.section_img{
+    width: 100%;
+    height: 100%;
+    position: relative;
+    
+ }
+
+.name  h1{
+    color:white;
+    margin-left: 14rem;
+    font-size: 5rem;
+    position: absolute;
+   bottom: 50%;
+   transform: translate(10%, 30%);
+   
+}
+
+.name h3{
+   color:white;
+    font-size: 2rem;
+    margin-left: 23rem;
+    text-shadow: 20px 10px 40px yellow;
+    position: absolute;
+    bottom: 40%;
+    
+}
+
+.cv_button{
+    width: 100px;
+    height: 50px;
+    background-color: beige;
+    position: absolute;
+    margin-top: 10px;
+    margin-left: 255px;
+    border: solid gray;
+    border-radius: 20px;
+    box-shadow: 1px 5px 70px 1px blue;
+    
+    
+}
+
+.cv_a {
+    color: aqua;
+    font-weight: bold;
+    font-size: 1.5rem;
+}
+
+@media  (max-width: 890px){
+    .name  h1{
+        margin-left: 150px;
+        font-size: 3rem;
+        position: absolute;
+        bottom: 45%;
+        transform: translate(20%, 100%);
+        
+     }
+     
+     .name h3{
+         font-size: 1rem;
+         margin-left: 70px;
+         text-shadow: 20px 10px 40px yellow;
+         position: absolute;
+         bottom: 59%;
+         
+     }
+     .cv_button{     
+         margin: 0;
+         margin-left: 50px;
+         margin-top: 5px;  
+     }
+
+}
+    
+
+
+@media (max-width: 800px){
+
+    
+    .navbar{
+        background-color: rgb(5, 5, 34);
+        width: 100%;   
+        height: 60px;
+    }
+    .nav_items{
+        
+        position: relative;
+        top: 350px;
+        left: 0;
+        background: rgb(78, 72, 60);
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+        height: 300px;
+        transform: translateX(-100%);
+        transition: 0.3s ease all;
+        position: fixed;
+        border-radius: 50px 100px 0 ;
+    } 
+    .nav_items, .nava{
+        color: aqua;
+        text-align: center;
+    }
+    .nav_toggle{
+        display: flex !important;
+        flex-direction: column;
+        margin: 50px;
+    }
+    .nav_toggle span{
+        width: 30px;
+        height: 4px;
+        background: white;
+        margin-bottom: 5px;
+        border-radius: 2px;
+        transform-origin: 5px, 0px;
+        transition: all 0.2 s linear;
+    }
+    .close span {
+        transform: rotate(45seg) translate(0px, 0px);
+    }
+    .close span:nth-child(2){
+        display: none;
+    }
+    .close span:nth-child(3) {
+        transform: rotate(45seg) translate(-5px, 1px);
+    }
+    .open{
+        transform: translateX(0) !important;
+    }
+    .name .section_img{
+        width: 100%;
+        height: 350px;
+        overflow: hidden;
+        position: relative;
+        margin: 0 auto;
+     }
+    .name  h1{
+       color:white;
+       margin: 0 auto;
+       margin-left: 10px;
+       font-size: 2rem;
+       position: absolute;
+       bottom: 80%;
+       transform: translate(20%, 100%);
+       
+    }
+    
+    .name h3{
+       color:white;
+       margin: 0;
+        font-size: 1rem;
+        margin-left: 30px;
+        text-shadow: 20px 10px 40px yellow;
+        position: absolute;
+        bottom: 75%;
+        
+    }
+    .cv_button{     
+        margin: 0;
+        margin-left: 50px;
+        margin-top: 5px;  
+    }
+}
+
+
+
+
+
+/* ------------------------PROJEC------------------------ */
+
+
+.main-portfolio{
+   text-align: center;
+    margin-top: 80px;
+    font-size: 3rem;
+    padding-bottom: 50px;
+    
+}
+
+.main-project, img {
+    display: grid;
+    justify-content: center;
+    border-radius: 20px;
+    box-shadow: 1px 1px 15px 1px;
+    margin: 0 auto;
+    
+}
+
+.main-p{
+
+    display: flex;
+	flex-direction: row;
+	flex-wrap: nowrap;
+	gap: 5rem;
+    justify-items: center;
+    justify-content: center;
+    align-items: center;
+	align-content: stretch;
+
+}
+
+.texto {
+    color: black;
+    text-align: center;
+    margin-left: 20px;
+    font-weight: bold;
+    
+}
+
+@media screen and (min-width:870px) {
+    .main-project{
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr;
+        gap: 2rem;
+        justify-items: center;
+
+        
+    }
+
+}
+/* ------------------------SKILL------------------------ */
+
+.main-skill{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    grid-template-rows: 100px;
+    justify-items: center;
+    border: solid;
+    background-color: black;
+    gap: 0.5rem;
+    
+}
+.skill-imag{
+   width: 70px;   
+   box-shadow: 0px 10px 10px 0px cornflowerblue;
+}
+
+@media screen and (min-width:880px) {
+    .skill-imag{
+        width: 120px;
+        gap: 10rem;
+        box-shadow: none;
+    }
+    .main-skill{
+       border-radius: 0px 50px 0px;
+        gap: 4rem;
+    }
+}
+
+
+
+/* ------------------------ABOUT ME------------------------ */
+
+.main-about {
+    width: 400px;
+    height: 400px;
+    background-color: beige;
+    border-radius: 20px;
+    margin: 0 auto;
+    display: grid;
+    
+}
+.text {
+    text-align: center;
+    font-size: 1rem;
+    padding-top: 90px;  
+}
+@media screen and (min-width:880px) {
+    .text{
+        font-size: 1.8rem;
+    }
+    .main-about{
+        width: 800px;
+    }
+    
+}
+
+
+/* ------------------------TESTIMONY------------------------ */
+
+.main-testimony, .img_testi{
+   /* margin-left: 70px; */
+   font-size: 1.5rem;
+   display: grid;
+   grid-template-columns: 1fr 1fr ;
+   gap: 7rem;
+   justify-items: center;
+   justify-content: center;
+   margin: 0 auto;
+   width: 100px;
+}
+
+.testim-tex{
+    font-size: 12px;
+}
+
+.testim-te{
+    font-size: 13px;
+    font-weight: bold;
+
+}
+
+@media screen and (min-width:880px) {
+    .main-testimony, .img_testi {
+       margin: 0 auto; 
+       width: 180px;
+      
+    }
+    .main-testimony {
+        gap: 40rem;
+    }
+
+     .testim-tex, p{
+        font-size: 1rem;
+    }
+    .testim-te{
+        font-size: 20px;
+        font-weight: bold;
+    
+}
+}
+    
+
+/* ------------------------CONTAC------------------------ */
+.main-cont{
+    margin-top: 80px;
+    margin-left: 50px;
+    font-style: oblique;
+    font-weight: bold;
+    font-size: 1.5rem;
+}
+
+footer{
+    /* display: grid;
+    grid-template-columns: 1fr 1fr ;
+    justify-items: center;
+    padding: 10px;
+    border-radius: 0 0 40px 40px; */
+    display: flex;
+    margin: 0;
+    justify-content: center;
+    
+    background-color:rgb(234, 224, 224);
+    
+}
+
+.cont{
+    box-shadow: none;
+    width: 28px;
+}
+@media screen and (min-width:880px) {
+    .cont{
+        box-shadow: none;
+        width: 50px;
+    }
+    .main-cont{
+      
+      text-align: center;
+      margin-bottom: 30px;
+      
+    }
+}
+   
